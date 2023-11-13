@@ -19,26 +19,29 @@ public class CalcServlet extends HttpServlet {
         String s = req.getParameter("op");
         int val2 = Integer.parseInt(req.getParameter("val2"));
 
-        switch(s) {
-            case "+":
-                out.println("<p> val1" + "+" + "val2" + "=" + (val1+val2) + "</p>");
+        switch(req.getParameter("op")) {
+            case "plus":
+                out.println(val1 + "+" + val2 + "결과 =>");
+                out.println(val1 + val2);
                 break;
-            case "-":
-                out.println("<p> val1" + "-" + "val2" + "=" + (val1-val2) + "</p>");
+            case "minus":
+                out.println(val1 + "-" + val2 + "결과 =>");
+                out.println(val1 - val2);
                 break;
-            case "*":
-                out.println("<p> val1" + "*" + "val2" + "=" + (val1*val2) + "</p>");
+            case "mul":
+                out.println(val1 + "*" + val2 + "결과 =>");
+                out.println(val1 * val2);
                 break;
-            case "/":
-                if(val2 !=0) {
-                    out.println("<p> val1" + "/" + "val2" + "=" + (val1/val2) + "</p>");
-                }
-                else {
-                    out.println("<p> 0으로 나눌 수 없습니다.</p>");
-                }
+            case "div":
+                out.println(val1 + "/" + val2 + "결과 =>");
+                out.println(val1 / val2);
+            case "mov":
+                out.println(val1 + "%" + val2 + "결과 =>");
+                out.println(val1 % val2);
                 break;
             default:
                 out.println("<p> 사직연산 외에 연산자는 사용할 수 없습니다.</p>");
+                break;
         }
     }
 }

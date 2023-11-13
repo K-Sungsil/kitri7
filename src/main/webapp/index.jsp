@@ -19,5 +19,7 @@
 <a href="memberln.html">쿼리 스트링</a>
 <br/>
 <a href="practice/multiplication.html">실습 1 : 구구단</a>
+<br/>
+<a href="practice/calc.html">실습 2 : 계산기</a>
 </body>
 </html>
