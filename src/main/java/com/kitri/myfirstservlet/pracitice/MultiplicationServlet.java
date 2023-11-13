@@ -1,4 +1,4 @@
-package practice;
+package com.kitri.myfirstservlet.pracitice;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
